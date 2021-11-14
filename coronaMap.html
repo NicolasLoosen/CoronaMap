@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html lang="de">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Corona-Verbreitung</title>
+  <link rel="stylesheet" href="css/coronaMap.css"/>
+  <link rel="stylesheet" href="css/utils.css"/>
+  <link rel="stylesheet" href="css/bar-chart.css"/>
+  <link rel="stylesheet" href="css/options.css"/>
+  <link rel="stylesheet" href="css/map.css"/>
+  <link rel="stylesheet" href="css/tooltip.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="container">
+        <div class="flex flex-row h-100">
+            <div class="flex flex-stretch" style="width: 60%;">
+                <div class="card h-100 w-100 svg-map" style="justify-content: center;">
+                    <svg>
+                        <g class="map" id="map" width="auto">
+                            <defs>
+                            <filter id="shadow">
+                                <feDropShadow dx="-0.01" dy="-0.02" stdDeviation="0.02"/>
+                            </filter>
+                            </defs>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            <div class="flex flex-col" style="width: 40%;">
+                <div class="pl-1 pb-1">
+                    <div class="card h-100 w-100">
+                        <div id="optionsHeader" class="card-header">
+                            <div id="stateSelection">
+                                <label for="state">Wählen Sie ein Bundesland aus.</label>
+                                <select id="state">
+                                </select>
+                            </div>
+                            <div id="predefinedSettings">
+                                <label for="predefinedSettingsSelection">Voreinstellungen</label>
+                                <select id="predefinedSettingsSelection">
+                                    <option value="blue">Blau</option>
+                                    <option value="red">Rot</option>
+                                    <option value="purple">Lila</option>
+                                    <option value="custom">Benutzerdefiniert</option>
+                                </select>
+                            </div>
+                            <div id="casesPer100k">
+                                <input type="radio" id="cases100K" name="Zahlmethode" value="cases_100K" checked/>
+                                <label for="cases100K"> Fälle pro 100.000 Einwohner</label> 
+                                <br/>
+                                <input type="radio" id="cases7100k" name="Zahlmethode" value="cases_7_100k"/>
+                                <label for="cases7100k">Fälle pro 100.000 Einwohner (letzten 7 Tage)</label>
+                            </div>
+                        </div>
+                        <div class="card-body" id="customSettings">
+                            <label for="numberOfCounties" class="setting">Wie viele Landkreise sollen angezeigt werden?</label>
+                            <br/>
+                            <input type="text" id="numberOfCounties" value="5" class="setting"/>
+                            <br/><br/>
+                            <label for="borderStrokeWidth" class="setting">Wie dick soll die Umrandung sein?</label>
+                            <br/>
+                            <input type="text" id="strokeWidth" value="7" class="setting"/>
+                            <br/><br/>
+                            <label for="borderStrokeWidth" class="setting">Wie dick soll die Umrandung für ausgewählte Elemente sein?</label>
+                            <br/>
+                            <input type="text" id="strokeWidthSelected" value="150" class="setting"/>
+                            <br/><br/>
+                            <label for="mapColor" class="setting">Farbe der Karte</label>
+                            <br/>
+                            <input type="text" id="mapColor" value="240" class="setting"/>
+                            <br/><br/>
+                            <label for="mapColor" class="setting">Farbe der hervorgehobenen Elemente</label>
+                            <br/>
+                            <input type="text" id="selectedColor" value="360" class="setting"/>
+                            <input type="checkbox" id="fillCounties">
+                            <label for="fillCounties" class="setting">Fill County</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex pl-1 h-100" style="overflow: hidden;">
+                    <div class="card h-100 w-100"  style="overflow-y: auto;">
+                        <div class="card-body h-100">
+                            <svg viewBox="0 0 100 100">
+                                <g id="svgBarChart"></g>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="div-tooltip"></div>
+    <div id="myModal" class="modal">
+    
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Modal Header</h2>
+        </div>
+        <div class="modal-body">
+          <p>Some text in the Modal Body</p>
+        </div>
+      </div>
+    
+    </div>
+    <script src="scripts/tooltip.js" type ="module"></script>
+    <script src="scripts/main.js" type="module"></script>
+</body>
+</html>

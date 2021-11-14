@@ -1,0 +1,23 @@
+.text {
+    font-size: 2px;
+    font-family: sans-serif;
+    fill: black;
+  }
+
+.bar {
+    stroke: black;
+    stroke-width: 0.1;
+  }
+.bar-chart {
+    animation-name: bar-chart-animation;
+    animation-duration: 1s;
+}
+  
+@keyframes bar-chart-animation {
+    from {
+        width: 0;
+    }
+    to {
+        visibility: visible;
+    }
+}

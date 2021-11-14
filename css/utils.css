@@ -1,0 +1,128 @@
+.m-1 {
+    margin: 1rem !important;
+}
+
+.m-2 {
+    margin: 2rem !important;
+}
+
+.p-1 {
+    padding: 1rem !important;
+}
+
+.p-2 {
+    padding: 2rem !important;
+}
+
+.pb-0 {
+    padding-bottom: 0rem !important;
+}
+
+.pt-0 {
+    padding-top: 0rem !important;
+}
+
+.pr-1 {
+    padding-right: 1rem !important;
+}
+
+.pl-1 {
+    padding-left: 1rem !important;
+}
+
+.pb-1 {
+    padding-bottom: 1rem !important;
+}
+
+.pt-1 {
+    padding-top: 1rem !important;
+}
+
+.h-25 {
+    height: 25% !important;
+}
+.h-50 {
+    height: 50% !important;
+}
+.h-75 {
+    height: 75% !important;
+}
+.h-100 {
+    height: 100% !important;
+}
+
+.w-25 {
+    width: 25% !important;
+}
+.w-50 {
+    width: 50% !important;
+}
+.w-75 {
+    width: 75% !important;
+}
+.w-100 {
+    width: 100% !important;
+}
+
+.mxh-25 {
+    max-height: 25% !important;
+}
+
+.mxh-50 {
+    max-height: 50% !important;
+}
+
+.mxh-75 {
+    max-height: 75% !important;
+}
+
+.mxh-100 {
+    max-height: 100% !important;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    word-wrap: break-word;
+}
+  
+.card-header {
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: rgba(0,0,0,0.03);
+    border-bottom: 1px solid rgba(0,0,0, 0.125);
+}
+  
+.card-body {
+    padding: 1.25rem;
+}
+  
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.1);
+}
+
+.hide {
+    display: none
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-stretch {
+    align-self: stretch;
+}

@@ -1,0 +1,35 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    max-height: 100%;
+    margin: 0rem;
+    font-weight: 300;
+    line-height: 1.42em;
+    font-family: 'Roboto';
+    overflow: hidden;
+}
+
+body {
+    /* font-family: 'Open Sans', sans-serif; */
+    color:#5e5a61;
+    background-color:#1F2739;
+  }
+
+#container{
+    padding: 2rem;
+    height: calc(100% - 2 * 2rem);
+    width: calc(100% - 2 * 2rem);
+}
+
+input[type=text] {
+    border: none;
+    border-bottom: 2px solid lightgray;
+    transition: 0.5s;
+}
+  
+input[type=text]:focus {
+    border-bottom: 2px solid red;
+}

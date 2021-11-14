@@ -1,0 +1,35 @@
+#optionsHeader {
+    display: grid;
+    grid-template-areas: "stateSelection settings"
+                         "cases cases";
+    /* grid-template-columns: repeat(auto-fit, minmax(300px, 100%)); */
+    column-gap: 4%;
+    row-gap: 1rem;
+}
+
+#stateSelection {
+    grid-area: stateSelection;
+}
+
+#predefinedSettings {
+    grid-area: settings;
+}
+
+#casesPer100k {
+    grid-area: cases;
+}
+
+#predefinedSettingsSelection {
+    width: 100%;
+}
+
+
+#settingsDiv {
+    display: grid;
+    grid-template-columns: auto max-content max-content;
+    column-gap: 5%;
+}
+  
+#state {
+    width: 100%;
+}

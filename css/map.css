@@ -1,0 +1,19 @@
+
+.border-animation {
+  animation-name: border-width-animation;
+  animation-duration: 4s;
+}
+
+@keyframes border-width-animation {
+  from {
+    stroke-width: 0.007;
+  }
+  to {
+    visibility: visible;
+  }
+}
+
+.svg-map {
+  background-image: linear-gradient(to bottom, darkblue , black);
+  outline: 1px solid black;
+}
